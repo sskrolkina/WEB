@@ -7,94 +7,56 @@
   <meta name="keywords" content="торты, санкт-петербург, заказ, бенто, подарок">
   <meta name="content-language" content="ru">
   <title>Торты на заказ</title>
-  <style>
-    body {
-      font-family: "Times New Roman", sans-serif;
-      background-color: whitesmoke;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background-color: darkolivegreen;
-      color: black;
-      text-align: center;
-      padding: 1em;
-    }
-    nav {
-      background-color: saddlebrown;
-      padding: 1em;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: pink;
-    }
-    main {
-      padding: 2em;
-    }
-    section {
-      margin-bottom: 2em;
-    }
-    aside {
-      background-color: #eee;
-      padding: 1em;
-      margin-top: 1em;
-    }
-    code {
-      background-color: #7d9140;
-      padding: 0.5em;
-      display: block;
-      margin: 1em 0;
-      text-align: center;
-    }
-    .ascii-art {
-      background-color: black;
-      color: #eeeeee;
-      font-family: monospace;
-      white-space: pre;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <h1>Swamp</h1>
+<header class="header">
+  <h1 class="header__title">Swamp</h1>
+  <img src="shrek.jpg" alt="Шрек" class="header__logo">
 </header>
 
-<nav>
+<nav class="nav">
   <h3>
-  <a href="#about">О нас</a>
-  <a href="#bestsellers">Заказать</a>
-  <a href="#contacts">Контакты</a>
+    <a href="#about" class="nav__link">О нас</a>
+    <a href="#bestsellers" class="nav__link">Заказать</a>
+    <a href="#contacts" class="nav__link">Контакты</a>
   </h3>
 </nav>
 
-<main>
+<main class="main">
   <section id="bestsellers">
     <h2>Наши хиты</h2>
-    <ul>
-      <li>Негр в пене</li>
-      <li>Улыбка негра</li>
-      <li>Поцелуй негра</li>
-    </ul>
-  </section>
+    <div class="bestsellers__gallery">
+      <a href="#tort-negr-v-pene">
+        <img src="tort-negr-v-pene.jpeg" alt="Негр в пене" class="bestsellers__image">
+        <p>Негр в пене</p>
+      </a>
+      <a href="#pirog-uljbka-negra">
+        <img src="pirog-uljbka-negra.jpeg" alt="Улыбка негра" class="bestsellers__image">
+        <p>Улыбка негра</p>
+      </a>
+      <a href="#tort-pocelui-negra">
+        <img src="tort-pocelui-negra.jpeg" alt="Поцелуй негра" class="bestsellers__image">
+        <p>Поцелуй негра</p>
+      </a>
+    </div>
 
-  <section id="about">
+  <section id="about" class="main__section">
     <h2>О нас</h2>
-    <p>Кондиитерская на болоте сделает ваш торт незабываемым. Любые начинки и идеи, лучший кондитер и гарантия отравления</p>
+    <p>Кондитерская на болоте сделает ваш торт незабываемым. Любые начинки и идеи, лучший кондитер и гарантия отравления</p>
   </section>
 
-  <aside>
+  <aside class="main__highlight">
     <h3>Наш девиз</h3>
-    <blockquote>
-      "Слушайте, <strong>сказочные твари!</strong> Не будьте как дома, вам тут официально не рады. <ins>Это факт."</ins>
+    <blockquote class="main__quote">
+      "Слушайте, <strong>сказочные твари!</strong> Не будьте как дома, вам тут официально не рады. <ins>Это факт.</ins>"
     </blockquote>
   </aside>
-  <section>
+
+  <section class="main__section">
     <h2>Наш шеф-кондитер (ASCII Art)</h2>
     <div class="ascii-art">
-                <pre>⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+      <pre>⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
 ⣿⠤⠄⠄⠙⢿⣿⣿⣿⡿⠿⠛⠛⢛⣧⣿⠇⠄⠂⠄⠄⠄⠘⣿⣿⣿⣿⠁⠄⢻
 ⣿⣿⣿⣿⣶⣄⣾⣿⢟⣼⠒⢲⡔⣺⣿⣧⠄⠄⣠⠤⢤⡀⠄⠟⠉⣠⣤⣤⣤⣾
@@ -109,27 +71,29 @@
 ⠈⠈⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣽⣉⡉⠉⠈⠁⠄⠁⠄⠄⠄⠄⡂⠄⠄⠄⠄⠄
 ⠄⠄⠙⣿⣿⠿⣿⣿⣿⣿⣷⡤⠈⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠠⠔⠄⠄⠄⠄⠄
 ⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄
-                </pre>
+
+      </pre>
     </div>
   </section>
 
-  <section>
+  <section class="main__section">
     <h2>Наши контакты</h2>
-    <article id="contacts">
-      <p>Телеоф <strong>+7 987 650 43 21</strong></p>
-      <p>Почта <ins>shrek@inc.ru</ins></p>
-      <p>Соц.сети <strong>brokencatpaw</strong></p>
+    <article id="contacts" class="contacts">
+      <p class="contacts__item">Телефон: <strong>+7 987 650 43 21</strong></p>
+      <p class="contacts__item">Почта: <ins>shrek@inc.ru</ins></p>
+      <p class="contacts__item">Соц.сети: <strong>brokencatpaw</strong></p>
     </article>
   </section>
 </main>
+
 <section>
   <h2>Код</h2>
-  <code>
+  <code class="code">
     &lt;h1&gt;Html ого&lt;/h1&gt;
   </code>
 </section>
 
-<footer>
+<footer class="footer">
   <p>&copy; 2024 Swamp</p>
   <p><ins>Мы уже приехали?</ins></p>
 </footer>
