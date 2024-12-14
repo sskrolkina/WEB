@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "micromodal": "^0.4.10",
+    "swiper": "^11.1.15"
+  }
+}

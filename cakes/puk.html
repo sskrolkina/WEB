@@ -8,6 +8,7 @@
   <meta name="content-language" content="ru">
   <title>Торты на заказ</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 <header class="header">
@@ -25,66 +26,72 @@
 
 <main class="main">
   <section id="bestsellers">
-    <h2>Наши хиты</h2>
-    <div class="bestsellers__gallery">
-      <a href="#tort-negr-v-pene">
-        <img src="tort-negr-v-pene.jpeg" alt="Негр в пене" class="bestsellers__image">
-        <p>Негр в пене</p>
-      </a>
-      <a href="#pirog-uljbka-negra">
-        <img src="pirog-uljbka-negra.jpeg" alt="Улыбка негра" class="bestsellers__image">
-        <p>Улыбка негра</p>
-      </a>
-      <a href="#tort-pocelui-negra">
-        <img src="tort-pocelui-negra.jpeg" alt="Поцелуй негра" class="bestsellers__image">
-        <p>Поцелуй негра</p>
-      </a>
-    </div>
-
-    <section id="about" class="main__section">
-      <h2>О нас</h2>
-      <p>Кондитерская на болоте сделает ваш торт незабываемым. Любые начинки и идеи, лучший кондитер и гарантия отравления</p>
-    </section>
-
-    <aside class="main__highlight">
-      <h3>Цена наших вкусняшек</h3>
-      <div class="table-container">
-        <div class="table">
-          <div class="table-header">
-            <div class="table-header-item">Назвние</div>
-            <div class="table-header-item">Вес</div>
-            <div class="table-header-item">Стоимость</div>
-          </div>
-          <div class="table-row">
-            <div class="table-item">Негр в пене</div>
-            <div class="table-item">2кг</div>
-            <div class="table-item">2340</div>
-          </div>
-          <div class="table-row">
-            <div class="table-item">Поцелуй негра</div>
-            <div class="table-item">1,5кг</div>
-            <div class="table-item">2280</div>
-          </div>
-          <div class="table-row">
-            <div class="table-item">Улыбка негра</div>
-            <div class="table-item">1,5кг</div>
-            <div class="table-item">2390</div>
-          </div>
-          <div class="table-row">
-            <div class="table-item">Капкейки Нигритята</div>
-            <div class="table-item">1кг</div>
-            <div class="table-item">2222</div>
-          </div>
+    <h2 class="section-title">Наши хиты</h2>
+    <div class="swiper-container bestsellers__gallery">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="tort-negr-v-pene.jpeg" alt="Негр в пене" class="bestsellers__image">
+          <p>Негр в пене</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="pirog-uljbka-negra.jpeg" alt="Улыбка негра" class="bestsellers__image">
+          <p>Улыбка негра</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="tort-pocelui-negra.jpeg" alt="Поцелуй негра" class="bestsellers__image">
+          <p>Поцелуй негра</p>
         </div>
       </div>
-      <blockquote class="main__quote">
-        "Слушайте, <strong>сказочные твари!</strong> Не будьте как дома, вам тут официально не рады. <ins>Это факт.</ins>"
-      </blockquote>
-    </aside>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-    <section class="main__section">
-      <h2>Наш шеф-кондитер (ASCII Art)</h2>
-      <div class="ascii-art">
+  <section id="about" class="main__section">
+    <h2>О нас</h2>
+    <p>Кондитерская на болоте сделает ваш торт незабываемым. Любые начинки и идеи, лучший кондитер и гарантия отравления</p>
+  </section>
+
+  <aside class="main__highlight">
+    <h3>Цена наших вкусняшек</h3>
+    <div class="table-container">
+      <div class="table">
+        <div class="table-header">
+          <div class="table-header-item">Назвние</div>
+          <div class="table-header-item">Вес</div>
+          <div class="table-header-item">Стоимость</div>
+        </div>
+        <div class="table-row">
+          <div class="table-item">Негр в пене</div>
+          <div class="table-item">2кг</div>
+          <div class="table-item">2340</div>
+        </div>
+        <div class="table-row">
+          <div class="table-item">Поцелуй негра</div>
+          <div class="table-item">1,5кг</div>
+          <div class="table-item">2280</div>
+        </div>
+        <div class="table-row">
+          <div class="table-item">Улыбка негра</div>
+          <div class="table-item">1,5кг</div>
+          <div class="table-item">2390</div>
+        </div>
+        <div class="table-row">
+          <div class="table-item">Капкейки Нигритята</div>
+          <div class="table-item">1кг</div>
+          <div class="table-item">2222</div>
+        </div>
+      </div>
+    </div>
+    <blockquote class="main__quote">
+      "Слушайте, <strong>сказочные твари!</strong> Не будьте как дома, вам тут официально не рады. <ins>Это факт.</ins>"
+    </blockquote>
+  </aside>
+
+  <section class="main__section">
+    <h2>Наш шеф-кондитер (ASCII Art)</h2>
+    <div class="ascii-art">
       <pre>⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
 ⣿⠤⠄⠄⠙⢿⣿⣿⣿⡿⠿⠛⠛⢛⣧⣿⠇⠄⠂⠄⠄⠄⠘⣿⣿⣿⣿⠁⠄⢻
@@ -102,17 +109,17 @@
 ⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄
 
       </pre>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="main__section">
-      <h2>Наши контакты</h2>
-      <article id="contacts" class="contacts">
-        <p class="contacts__item">Телефон: <strong>+7 987 650 43 21</strong></p>
-        <p class="contacts__item">Почта: <ins>shrek@inc.ru</ins></p>
-        <p class="contacts__item">Соц.сети: <strong>brokencatpaw</strong></p>
-      </article>
-    </section>
+  <section class="main__section">
+    <h2>Наши контакты</h2>
+    <article id="contacts" class="contacts">
+      <p class="contacts__item">Телефон: <strong>+7 987 650 43 21</strong></p>
+      <p class="contacts__item">Почта: <ins>shrek@inc.ru</ins></p>
+      <p class="contacts__item">Соц.сети: <strong>brokencatpaw</strong></p>
+    </article>
+  </section>
 </main>
 
 <section>
@@ -126,5 +133,26 @@
   <p>&copy; 2024 Swamp</p>
   <p><ins>Мы уже приехали?</ins></p>
 </footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3001,
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+</script>
 </body>
 </html>
