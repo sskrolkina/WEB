@@ -3,22 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("search");
     const results = document.getElementById("results");
     const cartContainer = document.getElementById("cartContainer");
+    const dynamicData = document.getElementById("dynamicData");
+    const preloader = document.getElementById("preloader");
 
-    const cakes = [
-        "Наполеон",
-        "Чизкейк",
-        "Медовик",
-        "Красный Бархат",
-        "Шоколадный торт",
-        "Тирамису",
-        "Фруктовый торт",
-        "Негр в пене",
-        "Поцелуй негра",
-        "Улыбка негра",
-        "10 нигритят"
-    ];
-
+    let cakes = [];
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const showPreloader = () => (preloader.style.display = "block");
+    const hidePreloader = () => (preloader.style.display = "none");
 
     const updateCart = () => {
         cartContainer.innerHTML = "";
@@ -52,6 +44,50 @@ document.addEventListener("DOMContentLoaded", () => {
         cartContainer.appendChild(list);
     };
 
+    const loadCakes = async (filterType = "greater") => {
+        showPreloader();
+        try {
+            const response = await fetch("cakes.json");
+            if (!response.ok) throw new Error(`Ошибка: ${response.status}`);
+            const data = await response.json();
+
+            cakes = data.filter((album) =>
+                filterType === "greater" ? album.id >= 1 : album.id <= 3
+            );
+
+            renderDynamicData();
+        } catch (error) {
+            dynamicData.innerHTML = `<p class="error">⚠ Что-то пошло не так: ${error.message}</p>`;
+        } finally {
+            hidePreloader();
+        }
+    };
+
+    const renderDynamicData = () => {
+        dynamicData.innerHTML = "";
+        cakes.forEach((cake) => {
+            const card = document.createElement("div");
+            card.classList.add("cake-card");
+            card.innerHTML = `
+      <h4>${cake.title}</h4>
+      <img src="${cake.image}" alt="${cake.title}" class="cake-image">
+      <button class="button button--add" data-title="${cake.title}">Добавить в корзину</button>
+    `;
+            dynamicData.appendChild(card);
+            dynamicData.appendChild(card);
+        });
+
+        const addButtons = document.querySelectorAll(".button--add");
+        addButtons.forEach((button) =>
+            button.addEventListener("click", () => {
+                const title = button.getAttribute("data-title");
+                cart.push(title);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCart();
+            })
+        );
+    };
+
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.toLowerCase();
         results.innerHTML = "";
@@ -67,10 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredCakes.forEach((cake) => {
             const listItem = document.createElement("li");
             listItem.classList.add("result-item");
-            listItem.textContent = cake;
+            listItem.textContent = cake.title;
 
             listItem.addEventListener("click", () => {
-                cart.push(cake);
+                cart.push(cake.title);
                 localStorage.setItem("cart", JSON.stringify(cart));
                 updateCart();
                 results.innerHTML = "";
@@ -80,6 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
             results.appendChild(listItem);
         });
     });
+
+    loadCakes("greater");
 
     updateCart();
 });

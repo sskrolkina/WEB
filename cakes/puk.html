@@ -7,96 +7,8 @@
   <meta name="keywords" content="торты, санкт-петербург, заказ, бенто, подарок">
   <meta name="content-language" content="ru">
   <title>Торты на заказ</title>
-<<<<<<< HEAD
-  <style>
-    body {
-      font-family: "Times New Roman", sans-serif;
-      background-color: whitesmoke;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background-color: darkolivegreen;
-      color: black;
-      text-align: center;
-      padding: 1em;
-    }
-    nav {
-      background-color: saddlebrown;
-      padding: 1em;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: pink;
-    }
-    main {
-      padding: 2em;
-    }
-    section {
-      margin-bottom: 2em;
-    }
-    aside {
-      background-color: #eee;
-      padding: 1em;
-      margin-top: 1em;
-    }
-    code {
-      background-color: #ddd;
-      padding: 0.5em;
-      display: block;
-      margin: 1em 0;
-    }
-    .ascii-art {
-      background-color: black;
-      color: #eeeeee;
-      font-family: monospace;
-      white-space: pre;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-<header>
-  <h1>Swamp</h1>
-</header>
-
-<nav>
-  <h3>
-  <a href="#about">О нас</a>
-  <a href="#bestsellers">Заказать</a>
-  <a href="#contacts">Контакты</a>
-  </h3>
-</nav>
-
-<main>
-  <section id="bestsellers">
-    <h2>Наши хиты</h2>
-    <ul>
-      <li>Негр в пене</li>
-      <li>Улыбка негра</li>
-      <li>Поцелуй негра</li>
-    </ul>
-  </section>
-
-  <section id="about">
-    <h2>О нас</h2>
-    <p>Кондиитерская на болоте сделает ваш торт незабываемым. Любые начинки и идеи, лучший кондитер и гарантия отравления</p>
-  </section>
-
-  <aside>
-    <h3>Наш девиз</h3>
-    <blockquote>
-      "Слушайте, сказочные твари! Не будьте как дома, вам тут официально не рады. Это факт."
-    </blockquote>
-  </aside>
-  <section>
-    <h2>Наш шеф-кондитер (ASCII Art)</h2>
-    <div class="ascii-art">
-                <pre>⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-=======
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 <header class="header">
@@ -114,21 +26,27 @@
 
 <main class="main">
   <section id="bestsellers">
-    <h2>Наши хиты</h2>
-    <div class="bestsellers__gallery">
-      <a href="#tort-negr-v-pene">
-        <img src="tort-negr-v-pene.jpeg" alt="Негр в пене" class="bestsellers__image">
-        <p>Негр в пене</p>
-      </a>
-      <a href="#pirog-uljbka-negra">
-        <img src="pirog-uljbka-negra.jpeg" alt="Улыбка негра" class="bestsellers__image">
-        <p>Улыбка негра</p>
-      </a>
-      <a href="#tort-pocelui-negra">
-        <img src="tort-pocelui-negra.jpeg" alt="Поцелуй негра" class="bestsellers__image">
-        <p>Поцелуй негра</p>
-      </a>
+    <h2 class="section-title">Наши хиты</h2>
+    <div class="swiper-container bestsellers__gallery">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="tort-negr-v-pene.jpeg" alt="Негр в пене" class="bestsellers__image">
+          <p>Негр в пене</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="pirog-uljbka-negra.jpeg" alt="Улыбка негра" class="bestsellers__image">
+          <p>Улыбка негра</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="tort-pocelui-negra.jpeg" alt="Поцелуй негра" class="bestsellers__image">
+          <p>Поцелуй негра</p>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
+  </section>
 
   <section id="about" class="main__section">
     <h2>О нас</h2>
@@ -175,7 +93,6 @@
     <h2>Наш шеф-кондитер (ASCII Art)</h2>
     <div class="ascii-art">
       <pre>⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
->>>>>>> f79b227011ae49f87c71769d97fde3625c0c03d1
 ⣿⠟⠫⢻⣿⣿⣿⣿⢟⣩⡍⣙⠛⢛⣿⣿⣿⠛⠛⠛⠛⠻⣿⣿⣿⣿⣿⡿⢿⣿
 ⣿⠤⠄⠄⠙⢿⣿⣿⣿⡿⠿⠛⠛⢛⣧⣿⠇⠄⠂⠄⠄⠄⠘⣿⣿⣿⣿⠁⠄⢻
 ⣿⣿⣿⣿⣶⣄⣾⣿⢟⣼⠒⢲⡔⣺⣿⣧⠄⠄⣠⠤⢤⡀⠄⠟⠉⣠⣤⣤⣤⣾
@@ -190,18 +107,6 @@
 ⠈⠈⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣽⣉⡉⠉⠈⠁⠄⠁⠄⠄⠄⠄⡂⠄⠄⠄⠄⠄
 ⠄⠄⠙⣿⣿⠿⣿⣿⣿⣿⣷⡤⠈⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠠⠔⠄⠄⠄⠄⠄
 ⠄⠄⠄⡈⢿⣷⣿⣿⢿⣿⣿⣷⡦⢤⡀⠄⠄⠄⠄⠄⠄⢐⣠⡿⠁⠄⠄⠄⠄⠄
-<<<<<<< HEAD
-                </pre>
-    </div>
-  </section>
-
-  <section>
-    <h2>Наши контакты</h2>
-    <article id="contacts">
-      <p>Телеоф <strong>+7 987 650 43 21</strong></p>
-      <p>Почта <ins>shrek@inc.ru</ins></p>
-      <p>Соц.сети <strong>brokencatpaw</strong></p>
-=======
 
       </pre>
     </div>
@@ -213,14 +118,10 @@
       <p class="contacts__item">Телефон: <strong>+7 987 650 43 21</strong></p>
       <p class="contacts__item">Почта: <ins>shrek@inc.ru</ins></p>
       <p class="contacts__item">Соц.сети: <strong>brokencatpaw</strong></p>
->>>>>>> f79b227011ae49f87c71769d97fde3625c0c03d1
     </article>
   </section>
 </main>
 
-<<<<<<< HEAD
-<footer>
-=======
 <section>
   <h2>Код</h2>
   <code class="code">
@@ -229,13 +130,29 @@
 </section>
 
 <footer class="footer">
->>>>>>> f79b227011ae49f87c71769d97fde3625c0c03d1
   <p>&copy; 2024 Swamp</p>
   <p><ins>Мы уже приехали?</ins></p>
 </footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3001,
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+  });
+</script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> f79b227011ae49f87c71769d97fde3625c0c03d1
